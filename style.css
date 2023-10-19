@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;900&display=swap");
+:root {
+  /* colors */
+  --bg-color: #0F0F0F;
+  --main-color: #008170;
+  /* font color */
+  --font-main: #e4e4e4;
+  --font-second: #008170;
+  /* hovers */
+  --bg-hover: #10141b;
+  --main-hover: #008170;
+}
+
+* {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--font-main);
+  font-family: "Work Sans";
+}
+
+a, p {
+  text-decoration: none;
+  color: var(--font-main);
+  font-size: 1.1rem;
+}
+
+.fa-brands {
+  font-size: 40px;
+}
+
+.fa-brands:hover {
+  color: var(--main-hover);
+}
+
+:hover {
+  transition: 0.4s;
+}
+
+h1 {
+  color: var(--font-black);
+}
+
+.btn {
+  position: relative;
+  padding: 15px 30px;
+  border: 2px solid var(--main-color);
+  border-radius: 99px;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn a {
+  position: relative;
+  color: var(--font-main);
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -15px;
+  width: 0px;
+  height: 0px;
+  border-radius: 100%;
+  background: var(--main-color);
+  transition: 0.6s ease;
+}
+
+.btn:hover::before {
+  width: 200px;
+  height: 200px;
+}
+
+/* Nav */
+nav {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  z-index: 1;
+}
+
+.nav-links li {
+  display: inline-flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.nav-links a:hover {
+  background-color: var(--bg-hover);
+}
+
+.logo h1 {
+  font-size: 40px;
+}
+
+.logo span {
+  color: var(--font-second);
+}
+
+/* Nav */
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* home */
+#Home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 90vh;
+}
+
+#Home h1 {
+  font-size: 50px;
+}
+
+.title span {
+  color: var(--font-second);
+}
+
+#Home p {
+  max-width: 350px;
+}
+
+.blur {
+  position: absolute;
+  box-shadow: 0 0 1000px 50px var(--main-color);
+  z-index: -100;
+}
+
+.content-profile {
+  position: relative;
+  margin-top: 30px;
+  display: inline-flex;
+  gap: 20px;
+}
+
+#Home img {
+  width: 450px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+/* home */
+/* about */
+#About {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-hover);
+  width: 100%;
+  height: 100vh;
+}
+
+#About h1 {
+  font-size: 40px;
+}
+
+.container-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container-about p {
+  max-width: 650px;
+  text-align: left;
+}
+
+.container-about img {
+  width: 600px;
+  height: 600px;
+  border-radius: 2rem;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.educxp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.square {
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid var(--main-color);
+  border-radius: 2rem;
+  width: 300px;
+  height: 140px;
+}
+
+.square p {
+  text-align: center;
+}
+
+.icons li {
+  display: inline-flex;
+  margin: 15px;
+}
+
+.icons p {
+  text-align: center;
+}
+
+/* about */
+/* projects */
+#Projects {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 110vh;
+}
+
+#Projects h1 {
+  font-size: 40px;
+}
+
+.container-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 400px;
+  border-radius: 25px;
+  background-color: var(--bg-hover);
+}
+
+/* projects */
+/* Main */
+/* Footer */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  height: 40vh;
+  background-color: var(--bg-hover);
+}
+
+.quick-contact h2 {
+  margin-bottom: 20px;
+}
+
+.quick-contact {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.quick-contact .info li {
+  display: grid;
+  grid-template-columns: 30px 360px;
+  margin-top: 10px;
+}
+
+.quick-links h2 {
+  margin-bottom: 20px;
+}
+
+.quick-links li {
+  display: inline-flex;
+}
+
+.copyright {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  background-color: var(--bg-hover);
+  border-top: 1.5px solid rgba(0, 0, 0, 0.25);
+}
+
+/* Footer *//*# sourceMappingURL=style.css.map */
